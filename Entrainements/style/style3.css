@@ -1,0 +1,114 @@
+/* Commentaire en CSS */
+
+h1, p {
+    color: rgba(2, 1, 9, 0.9); /* Couleur en RGBA (Red Green Blue Alpha) avec param d'opacité (compris entre 0 et 1)*/
+    font-family: "Lobster Two", sans-serif; /* Importation de la police Lobster Two depuis Google Fonts */
+}
+
+h1 {
+    font-size: 3em; /* 1em = taille par défaut du navigateur (16px généralement). La taille peut également être donnée en px */
+    text-align: center;
+    font-weight: 800; /* 100 à 900 avec 400 l'épaisseur par défaut, 700 = bold */
+    /* alternative : font-weight: bold | normal | thin; */
+    text-decoration: underline;
+    /* line-through pour barrer, overline pour souligner au-dessus, none par défaut */
+    background-image: url('../ressources/static/image/usa.jpg'); /* Image de fond pour le texte */
+    background-attachment: fixed; /* L'image de fond reste fixe lors du scroll */
+    background-size: cover; /* L'image de fond couvre toute la surface du texte */
+    background-position: center left; /* permet d'indiquer ou doit se trouver l'image de fond */
+    /* options : top left | top center | top right | center left | center center | center right | bottom left | bottom center | bottom right */
+    /* ces propriétés peuvent être combinées en une seule avec la propriété background: url('../ressources/static/image/usa.jpg') cover center*/
+    opacity: 0.5; /* Opacité de l'élément (0 = invisible, 1 = opaque) */
+    padding: 100px; /* Espace entre le texte et le bord de l'élément */
+}
+
+p {
+    font-size: 2em;
+    font-family: Arial, sans-serif;
+    border : 2px dotted black; /* bordure de 2px, en pointillé et de couleur noire */
+    /* border: 2px solid black; pour une bordure pleine ou dashed pour une bordure en tirets ou double pour un double trait*/
+    /* il existe aussi border-top, border-bottom, border-left, border-right et border-top-width, border-top-style, border-top-color, etc. */
+    border-radius: 10px; /* arrondir les coins de la bordure */
+    /*
+        on peut aussi arrondir chaque coin individuellement avec border-top-left-radius, border-top-right-radius, border-bottom-left-radius, border-bottom-right-radius
+        ou border-radius: 10px 20px 30px 40px; (dans le sens des aiguilles d'une montre en partant du coin en haut à gauche)
+        pour les formes complexes : cf. fancy border-radius generator sur le web
+    */
+    box-shadow: 2px 2px 2px black; /* ombre portée : décalage horizontal, décalage vertical, flou/adoucicement du dégradé, couleur */
+    /* pour les textes : text-shadow: 2px 2px 2px black; */
+}
+
+/*
+    . : class
+    # : id
+*/
+
+.rouge {
+    color: red;
+    font-style: italic; /* font-style: normal par défaut */
+}
+
+.bleu {
+    color: blue;
+    font-style: italic;
+}
+
+.blanc {
+    color: white;
+    background-color: black;
+    font-style: italic;
+}
+
+#onclesam {
+    text-align: center;
+}
+
+body {
+    background: linear-gradient(90deg, #8360c3, #2ebf91); /* Dégradé linéaire à 90 degrés entre deux couleurs hexadécimales */
+    /* on peut mettre linear-gradient(to right | to left | to top | to bottom, #8360c3, #2ebf91); pour orienter le dégradé */
+}
+
+/* pseudo-classes */
+img:hover {
+    opacity: 0.6; /* Changement d'opacité au survol de l'image */
+}
+
+img:active {
+    opacity: 0.1; /* Changement d'opacité lorsque l'image est cliquée */
+}
+
+a:focus {
+    color: black;
+    opacity: 1;
+    outline: 5px solid red; /* Contour rouge de 5px lorsque le lien est sélectionnée (touche tab)*/
+}
+
+a:visited {
+    color: greenyellow; /* Couleur des liens déjà visités */
+}
+
+/* sélecteurs avancés */
+p:hover + a {
+    color: deeppink; /* Change la couleur du lien <a> qui suit immédiatement le paragraphe <p> au survol de ce dernier */
+}
+
+* {
+    /* Sélecteur universel : s'applique à tous les éléments */
+}
+
+h3 em {
+    /* Sélecteur descendant : s'applique aux éléments <em> à l'intérieur des <h3> */
+}
+
+h3 + p {
+    /* Sélecteur adjacent : s'applique au <p> qui suit immédiatement un <h3> */
+}
+
+a[title] {
+    /* Sélecteur d'attribut : s'applique aux <a> qui ont un attribut title */
+    text-decoration: none;
+}
+
+a[attribut="valeur"] {
+    /* Sélecteur d'attribut avec valeur spécifique : s'applique aux <a> dont l'attribut attribut a la valeur "valeur" */
+}
