@@ -12,24 +12,60 @@
     <!-- Maintenant, on peut utiliser la police "Lobster Two" dans notre CSS -->
 </head>
 <body>
-<h1>Qui est L'Oncle Sam ?</h1>
-
+<header>
+    <h1>Qui est L'Oncle Sam ?</h1>
+</header>
 <!--
     Note : class et id ont le même rôle, mais un id est unique dans une page, tandis qu'une class peut être réutilisée plusieurs fois.
     Note : span est une balise en ligne (inline), contrairement à div qui est une balise de type bloc (block).
 -->
 
-<p>
-    L'Oncle Sam est une personnification nationale des États-Unis.
-    Il est souvent représenté comme un homme âgé avec une barbe blanche, portant un chapeau haut-de-forme
-    orné d'étoiles et des vêtements aux couleurs du drapeau américain (<span class="rouge">rouge</span>,
-    <span class="blanc">blanc</span> et <span class = "bleu">bleu</span>).
-    L'Oncle Sam est utilisé dans divers contextes, notamment dans la propagande militaire, les
-    campagnes de recrutement et les illustrations patriotiques.
-</p>
-<a href="https://google.com" target="_blank">Google</a>
-<div id="onclesam">
-    <img src="ressources/static/image/unclesam.jpg" alt="Oncle Sam te demande de rester à la maison" title="Oncle Sam" width="300"/>
-</div>
+<nav>
+    <!-- La balise nav est utilisée pour regrouper des liens de navigation (menu) -->
+    <a href="index1.html" target="_blank">Page 1</a> <br>
+    <a href="index2.html" target="_blank">Page 2</a> <br>
+</nav>
+
+<main>
+    <!-- La balise main est utilisée pour le contenu principal de la page -->
+    <section>
+        <!-- La balise section est utilisée pour regrouper des contenus thématiquement liés -->
+        <h2>Introduction</h2>
+        <p>
+            L'Oncle Sam est une personnification nationale des États-Unis.
+            Il est souvent représenté comme un homme âgé avec une barbe blanche, portant un chapeau haut-de-forme
+            orné d'étoiles et des vêtements aux couleurs du drapeau américain (<span class="rouge">rouge</span>,
+            <span class="blanc">blanc</span> et <span class = "bleu">bleu</span>).
+            L'Oncle Sam est utilisé dans divers contextes, notamment dans la propagande militaire, les
+            campagnes de recrutement et les illustrations patriotiques.
+        </p>
+        <a href="https://google.com" target="_blank">Google</a>
+    </section>
+
+    <section>
+        <div id="onclesam">
+            <img src="ressources/static/image/unclesam.jpg" alt="Oncle Sam te demande de rester à la maison" title="Oncle Sam" width="300"/>
+        </div>
+    </section>
+</main>
+
+<aside>
+    <!-- La balise aside est utilisée pour le contenu secondaire ou complémentaire -->
+    <h3>Faits intéressants</h3>
+    <ul>
+        <li>L'Oncle Sam est apparu pour la première fois au début du 19ème siècle.</li>
+        <li>Le nom "Oncle Sam" pourrait provenir des initiales "U.S." (United States).</li>
+        <li>James Montgomery Flagg a créé l'image emblématique de l'Oncle Sam pointant du doigt dans une affiche de recrutement en 1917.</li>
+    </ul>
+</aside>
+
+<!-- Note : la balise article est utilisée pour un contenu autonome, comme un article de blog ou une nouvelle provenant d'une source externe. -->
+
+<footer>
+    <a href="https://instagram.com/">Instagram</a>
+    <a href="https://facebook.com/">Facebook</a>
+    <a href="https://twitter.com/">Twitter</a>
+</footer>
+
 </body>
 </html>
