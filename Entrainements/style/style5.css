@@ -1,0 +1,69 @@
+.box {
+    border: 2px solid #4CAF50;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    align-content: center; /* Centrer verticalement le contenu dans la boîte */
+    text-align: center; /* Centrer horizontalement le texte dans la boîte */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* 5 colonnes de taille égale et qui remplissent l'espace disponible */
+    /*grid-template-columns: 250px 250px 250px 250px 250px; 5 tailles renseignées, donc 5 colonnes */
+    grid-template-rows: 150px 300px; /* 2 tailles renseignées, donc 2 lignes */
+    gap: 20px; /* Espacement entre les éléments */
+
+}
+
+.one {
+    grid-column: 1 / 6; /* Occupe les colonnes 1 à 5 */
+    /*
+        Ou:
+        grid-column-start: 1;
+        grid-column-end: 6;
+        ou:
+        grid-column: 1 / span 5; (occupe 5 colonnes à partir de la colonne 1)
+     */
+    grid-row: 1 / 2;    /* Occupe la ligne 1 */
+}
+
+.two {
+    grid-row:2 / 4; /* Occupe les lignes 2 à 4 */
+}
+
+.three {
+    grid-column: 2 / 4; /* Occupe les colonnes 2 et 3*/
+    grid-row: 2 / 3;    /* Occupe la ligne 2 */
+}
+
+.four {
+    grid-column: 4 / 6; /* Occupe les colonnes 4 et 5 */
+    grid-row: 2 / 3;    /* Occupe la ligne 2 */
+}
+
+.five {
+    grid-column: 2/6; /* Occupe les colonnes 2 à 5 */
+    grid-row: 3 / 4;   /* Occupe la ligne 3 */
+}
+
+.six {
+    grid-column: 1/4; /* Occupe les colonnes 1 à 3 */
+    grid-row: 4 / 5;   /* Occupe la ligne 4 */
+}
+
+.seven {
+    grid-column: 4/6; /* Occupe les colonnes 4 et 5 */
+    grid-row: 4 / 5;   /* Occupe la ligne 4 */
+}
+
+.eight {
+    grid-column: 1/3; /* Occupe les colonnes 1 et 2 */
+    grid-row: 5 / 6;   /* Occupe la ligne 5 */
+}
+
+.nine {
+    grid-column: 3/6; /* Occupe les colonnes 3 à 5 */
+    grid-row: 5 / 6;   /* Occupe la ligne 5 */
+}

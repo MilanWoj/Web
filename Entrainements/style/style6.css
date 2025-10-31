@@ -1,0 +1,44 @@
+a {
+    background-color: red;
+    color: white;
+    display: block; /* Transformer les liens en blocs */
+    width: 300px;
+    height: 100px;
+}
+
+.box {
+    border: 2px solid #4CAF50;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 50px;
+    text-align: center;
+    /*display: inline;  Transformer les boîtes en éléments en ligne (/!\ les paramètres de largeur et hauteur ne fonctionnent pas) */
+    display: inline-block; /* Transformer les boîtes en éléments en ligne tout en conservant les paramètres de largeur et hauteur */
+    /* display: none;  Cacher les boîtes */
+}
+
+.container {
+    position: relative; /* Nécessaire pour le positionnement absolu des éléments enfants */
+}
+
+/* Positionnement absolu des boîtes à l'intérieur du conteneur : permet de les placer précisément */
+
+.one {
+    position: absolute; /* Positionnement absolu par rapport au conteneur parent */
+    left: 0; /* Aligner à gauche */
+    top: 10px; /* Décaler vers le bas de 10px par rapport au haut de son conteneur parent */
+}
+
+.two {
+    position: absolute;
+    right: 70px; /* Décaler vers la gauche de 70px par rapport au bord droit de son conteneur parent */
+    top: 0; /* Aligner en haut */
+}
+
+.three {
+    position: absolute;
+    right: 0; /* Aligner à droite */
+    bottom: 20px; /* Décaler vers le haut de 20px par rapport au bas de son conteneur parent */
+}

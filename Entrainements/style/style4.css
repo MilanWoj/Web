@@ -1,0 +1,34 @@
+.box {
+    border: 2px solid #4CAF50;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 50px;
+}
+
+.container {
+    display: flex; /* permet de rendre le conteneur flexible */
+    flex-direction: row; /* aligne les éléments en ligne (horizontalement). Mettre column pour les aligner en colonne (verticalement) */
+    justify-content: space-around; /* espace les éléments de manière égale */
+    /* Autres options possibles :
+        justify-content: center; centre les éléments
+        justify-content: flex-start;  aligne les éléments au début
+        justify-content: flex-end;  aligne les éléments à la fin
+        justify-content: space-between; espace les éléments avec un espace égal entre eux
+    */
+    align-items: center; /* aligne les éléments verticalement au centre */
+    height: 100px;
+    flex-wrap: wrap; /* permet de passer à la ligne si les éléments ne rentrent pas */
+    gap: 20px; /* espace entre les éléments */
+}
+
+/*
+    Il est possible de modifier les éléments du conteneur flex en utilisant des propriétés spécifiques sur chaque élément enfant.
+    Par exemple, pour un élément avec la classe .item1 :
+    .item1 {
+        flex-grow: 2; permet à cet élément de grandir deux fois plus que les autres éléments
+        order: 1; change l'ordre d'affichage de cet élément (les éléments avec un ordre plus petit s'affichent en premier)
+        flex: 1 1 auto; permet de définir la flexibilité de l'élément (croissance, rétrécissement, taille de base)
+    }
+*/

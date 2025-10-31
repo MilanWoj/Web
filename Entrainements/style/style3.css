@@ -36,6 +36,16 @@ p {
     */
     box-shadow: 2px 2px 2px black; /* ombre portée : décalage horizontal, décalage vertical, flou/adoucicement du dégradé, couleur */
     /* pour les textes : text-shadow: 2px 2px 2px black; */
+
+    margin: 50px; /* Espace entre l'élément et les autres éléments (marge extérieure)*/
+    padding: 50px; /* Espace entre le contenu de l'élément et sa bordure (marge intérieure) */
+    /*
+        on peut aussi définir les marges et paddings individuellement avec :
+        margin-top, margin-bottom, margin-left, margin-right
+        padding-top, padding-bottom, padding-left, padding-right
+        ou margin: 10px 20px 30px 40px; (dans le sens des aiguilles d'une montre en partant du haut).
+        On peut aussi mettre margin: auto; pour centrer un élément sur la page
+     */
 }
 
 /*
@@ -111,4 +121,9 @@ a[title] {
 
 a[attribut="valeur"] {
     /* Sélecteur d'attribut avec valeur spécifique : s'applique aux <a> dont l'attribut attribut a la valeur "valeur" */
+}
+
+.banner {
+    width: 500px; /* ou taille en % */
+    height: 400px;
 }
