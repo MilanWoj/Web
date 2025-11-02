@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style/style7.css">
+</head>
+<body>
+<table>
+    <caption>Titre du tableau</caption>
+    <tr>
+        <th>Titre 1</th>
+        <th>Titre 2</th>
+        <th>Titre 3</th>
+    </tr>
+    <tr>
+        <td>Cellule 1 | Ligne 1</td>
+        <td>Cellule 2 | Ligne 1</td>
+        <td>Cellule 3 | Ligne 1</td>
+    </tr>
+    <tr>
+        <td>Cellule 1 | Ligne 2</td>
+        <td>Cellule 2 | Ligne 2</td>
+        <td>Cellule 3 | Ligne 2</td>
+    </tr>
+</table>
+<br>
+<table>
+    <caption>Autre exemple de tableau</caption>
+    <thead>
+        <tr>
+            <th>Colonne A</th>
+            <th>Colonne B</th>
+            <th>Colonne C</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Donnée A1</td>
+            <td>Donnée B1</td>
+            <td>Donnée C1</td>
+        </tr>
+        <tr>
+            <td>Donnée A2</td>
+            <td rowspan="2">Données B2 et B3</td>
+            <td>Donnée C2</td>
+        </tr>
+        <tr>
+            <td>Donnée A3</td>
+            <td>Donnée C3</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">Pied de page du tableau</td>
+        </tr>
+    </tfoot>
+</table>
+<br>
+<br>
+<form action="" method="get">
+    <!--
+        L'attribut action permet de spécifier où les données du formulaire seront envoyées et l'attribut method spécifie
+        la méthode HTTP utilisée pour envoyer les données (GET ou POST)
+    -->
+    <fieldset>
+        <legend>Informations générales</legend>
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required placeholder="Ex. : Dupont" autofocus>
+        <br><br>
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" rows="4" cols="30" required></textarea>
+        <br><br>
+        <label for="check">Accepter les termes et conditions</label>
+        <input type="checkbox" id="check" name="check">
+        <br><br>
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="password">
+        <br><br>
+        <input type="range" id="volume" name="volume" min="0" max="100">
+        <br><br>
+        <input type="date" id="date" name="date" value="2024-01-01" min="2023-01-01" max="2025-12-31">
+        <br><br>
+        <input type="submit" value="Envoyer">
+    </fieldset>
+
+    <!--
+        Il existe de nombreux autres types d'éléments de formulaire tels que les boutons radio, les listes déroulantes,
+        les champs de date, etc. Chaque élément a ses propres attributs et utilisations spécifiques.
+
+        <input type="time"> pour l'heure ;
+
+        <input type="week">  pour la semaine ;
+
+        <input type="month"  pour le mois ;
+
+        <input type="datetime">  pour la date et l'heure (avec gestion du décalage horaire) ;
+
+        <input type="datetime-local">  pour la date et l'heure (sans gestion du décalage horaire).
+
+        Le champ required dans les éléments de formulaire indique que le champ doit être rempli avant de soumettre le formulaire.
+    -->
+
+    <fieldset>
+        <legend>Âge</legend>
+        <p>
+            Veuillez indiquer la tranche d'âge dans laquelle vous vous situez :<br>
+            <input type="radio" name="age" value="moins15" id="moins15"> <label for="moins15">Moins de 15 ans</label><br>
+            <input type="radio" name="age" value="medium15-25" id="medium15-25"> <label for="medium15-25">15-25 ans</label><br>
+            <input type="radio" name="age" value="medium25-40" id="medium25-40"> <label for="medium25-40">25-40 ans</label><br>
+            <input type="radio" name="age" value="plus40" id="plus40"> <label for="plus40">Plus de 40 ans</label>
+        </p>
+        <!-- Changer le champ name permet de grouper les boutons radio ensemble -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Pays</legend>
+        <p>
+            <label for="pays">Dans quel pays habitez-vous ?</label><br>
+            <select name="pays" id="pays">
+                <option value="espagne">Espagne</option>
+                <option value="royaume-uni">Royaume-Uni</option>
+                <option value="canada">Canada</option>
+                <option value="japon">Japon</option>
+            </select>
+        </p>
+    </fieldset>
+
+</form>
+</body>
+</html>
